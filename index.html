@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharma Jeopardy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Pharma Jeopardy</h1>
+    <div id="score" aria-live="polite">Score: 0</div>
+  </header>
+  
+  <main>
+    <div id="board" class="board" role="grid" aria-label="Jeopardy board"></div>
+
+    <!-- Question modal -->
+    <div id="modal" class="modal hidden" role="dialog" aria-labelledby="modal-question" aria-modal="true">
+      <div class="modal-content">
+        <h2 id="modal-question"></h2>
+        <form id="answer-form">
+          <label for="answer-input">Your answer:</label>
+          <input id="answer-input" placeholder="Type your answer here" aria-required="true" />
+          <div class="button-group">
+            <button id="submit-answer" type="submit">Submit Answer</button>
+            <button id="close-modal" type="button">Cancel</button>
+          </div>
+          <div id="answer-feedback" class="feedback" aria-live="assertive"></div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Created for educational purposes</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
